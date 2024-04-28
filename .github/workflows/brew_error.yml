@@ -18,6 +18,10 @@ jobs:
   brew_error:
     runs-on: macos-latest
     steps:
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: cpp
       - name: Brew error
         run: |
           echo "brew install \
