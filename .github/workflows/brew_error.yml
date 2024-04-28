@@ -24,12 +24,10 @@ jobs:
           languages: cpp
       - name: Brew error
         run: |
-          echo "brew install \
+          brew install \
             boost \
             cmake \
             miniupnpc \
             node \
             opus \
-            pkg-config" > brew_install.sh
-          chmod +x brew_install.sh
-          ./brew_install.sh
+            pkg-config
