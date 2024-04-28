@@ -1,0 +1,29 @@
+---
+name: "Brew Test"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  brew_error:
+    runs-on: macos-latest
+    steps:
+      - name: Brew error
+        run: |
+          brew install \
+            boost \
+            cmake \
+            miniupnpc \
+            node \
+            opus \
+            pkg-config
