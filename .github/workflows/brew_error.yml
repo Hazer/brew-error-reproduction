@@ -20,10 +20,12 @@ jobs:
     steps:
       - name: Brew error
         run: |
-          brew install \
+          echo "brew install \
             boost \
             cmake \
             miniupnpc \
             node \
             opus \
-            pkg-config
+            pkg-config" > brew_install.sh
+          chmod +x brew_install.sh
+          ./brew_install.sh
