@@ -16,9 +16,7 @@ on:
 
 jobs:
   brew_error:
-    runs-on: 
-      - macos-latest
-      - macos-12
+    runs-on: macos-latest
     steps:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
