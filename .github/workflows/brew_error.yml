@@ -16,12 +16,15 @@ on:
 
 jobs:
   brew_error:
-    runs-on: macos-latest
+    runs-on: 
+      - macos-latest
+      - macos-12
     steps:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: cpp
+          tools: https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.17.0/codeql-bundle-osx64.tar.gz
       - name: Brew error
         run: |
           brew install \
